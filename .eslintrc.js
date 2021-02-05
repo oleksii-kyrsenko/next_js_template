@@ -36,5 +36,6 @@ module.exports = {
         aspects: ["invalidHref", "preferButton"],
       },
     ],
+    "react/prop-types": 0,
   },
 };
