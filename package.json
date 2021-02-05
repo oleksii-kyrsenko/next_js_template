@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "eslint --fix .",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,scss}'"
   },
   "husky": {
     "hooks": {
@@ -17,8 +17,8 @@
   "lint-staged": {
     "./**/*.{js,jsx,ts,tsx}": [
       "node_modules/.bin/eslint --max-warnings=0",
-      "prettier --write",
-      "git add"
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "browserslist": {

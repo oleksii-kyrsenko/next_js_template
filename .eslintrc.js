@@ -26,8 +26,13 @@ module.exports = {
   ],
   plugins: ['simple-import-sort', 'prettier'],
   rules: {
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }], // Use our .prettierrc file as source
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, jsxSingleQuote: true, parser: 'flow' },
+      { usePrettierrc: false },
+    ], // Use our .prettierrc file as source
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-closing-bracket-location': [1, 'line-aligned'],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -37,5 +42,7 @@ module.exports = {
       },
     ],
     'react/prop-types': 0,
+    'jsx-quotes': ['error', 'prefer-single'],
+    'no-tabs': ['error', { allowIndentationTabs: true }],
   },
 };
